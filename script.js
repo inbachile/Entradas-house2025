@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>INBA Chile 2025 - Reserva de Butacas</title>
+  <title>INBA Chile 2025 - Entradas-house2025</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
