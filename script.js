@@ -1,4 +1,4 @@
-const filas = "ABCDEFGHIJK".split("");
+const filas = "ABCDEFGHIJKLM".split("");
 const columnas = 21;
 const sala = document.getElementById("sala");
 const encabezado = document.getElementById("encabezado");
@@ -54,7 +54,7 @@ function crearAsientos() {
       seat.className = "asiento";
       seat.textContent = id;
 
-      if (["A", "B", "C", "D"].includes(fila)) seat.classList.add("vip");
+      if (["A", "B", "C", "D", "E"].includes(fila)) seat.classList.add("vip");
       if (ocupados.includes(id)) {
         seat.classList.add("ocupado");
       }
@@ -88,7 +88,7 @@ function actualizarSeleccion() {
   let total = 0;
   Array.from(seleccionados).forEach(id => {
     const fila = id.charAt(0);
-    total += ["A", "B", "C"].includes(fila) ? 27000 : 17000;
+    total += ["A", "B", "C", "D", "E"].includes(fila) ? 27000 : 17000;
   });
 
   seleccionadosDiv.textContent = `Asientos seleccionados: ${lista} | Total: $${total.toLocaleString("es-CL")}`;
@@ -104,7 +104,7 @@ function enviarReserva() {
   let total = 0;
   butacasArray.forEach(id => {
     const fila = id.charAt(0);
-    total += ["A", "B", "C"].includes(fila) ? 27000 : 17000;
+    total += ["A", "B", "C", "D", "E"].includes(fila) ? 27000 : 17000;
   });
 
   // No hacemos POST porque la hoja es solo lectura
