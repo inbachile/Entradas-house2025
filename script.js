@@ -25,7 +25,9 @@ async function obtenerButacasOcupadas() {
   try {
     const res = await fetch(API_URL);
     const data = await res.json();
-    ocupados = data.ocupados || [];
+    ocupados = Object.entries(data)
+      .filter(([_, estado]) => estado !== "libre")
+      .map(([butaca, _]) => butaca);
   } catch (error) {
     console.error("Error al obtener butacas ocupadas:", error);
   }
