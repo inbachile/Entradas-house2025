@@ -54,7 +54,7 @@ function crearAsientos() {
       seat.className = "asiento";
       seat.textContent = id;
 
-      if (["A", "B", "C"].includes(fila)) seat.classList.add("vip");
+      if (["A", "B", "C", "D"].includes(fila)) seat.classList.add("vip");
       if (ocupados.includes(id)) {
         seat.classList.add("ocupado");
       }
