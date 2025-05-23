@@ -9,7 +9,7 @@ let ocupados = [];
 let esAdmin = false;
 
 // URL pública CSV exportada desde Google Sheets (debes poner tu ID aquí)
-const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1-HarwNSpIAHn2lbjxYyF92hR6ikwPJvmu04xOFoMm9Q/edit?usp=sharing";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsgqAF-a0LLlL-Cd_lGdrg4nSWbt0fZHG3vQ4XEoDCUUCX5JsbdoGAPSMFNnGJ6tJ0Nxr0hvN_25IH/pub?output=csv";
 
 function crearEncabezado() {
   encabezado.innerHTML = "";
