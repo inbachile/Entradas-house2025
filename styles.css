@@ -1,53 +1,19 @@
-/* styles.css */
-
-.contenedor {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: center;
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f7f7f7;
+  color: #222;
 }
-
-.fila {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 5px;
-}
-
-.asiento {
-  width: 30px;
-  height: 30px;
-  background-color: green;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.asiento.vip {
-  background-color: gold;
-}
-
-.asiento.ocupado {
-  background-color: gray;
-  cursor: not-allowed;
-}
-
-.fila.encabezado .letra {
-  width: 30px;
-  height: 30px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.escenario {
-  margin: 20px auto;
-  text-align: center;
-  font-weight: bold;
-  background-color: #333;
-  color: white;
-  padding: 5px 20px;
-  border-radius: 4px;
-}
+header, footer { text-align: center; margin-bottom: 20px; }
+.teatro { max-width: 700px; margin: 0 auto; text-align: center; }
+.escenario { background: #444; color: white; padding: 10px; margin-bottom: 10px; font-weight: bold; }
+.fila { display: flex; justify-content: center; margin-bottom: 5px; }
+.encabezado { font-weight: bold; user-select: none; margin-bottom: 10px; }
+.letra { width: 30px; height: 30px; margin: 0 2px; line-height: 30px; text-align: center; }
+.asiento { width: 30px; height: 30px; margin: 0 2px; background: green; color: white; font-size: 12px; line-height: 30px; cursor: pointer; user-select: none; border-radius: 4px; transition: background-color 0.3s; }
+.asiento.vip { background: gold; color: black; }
+.asiento.ocupado { background: #888; cursor: not-allowed; color: #ccc; }
+.asiento:hover:not(.ocupado) { background: orange; color: black; }
+#seleccionados { margin: 15px 0; font-weight: bold; }
+button.enviar, button.admin { background: #0066cc; border: none; color: white; padding: 10px 15px; margin: 5px; cursor: pointer; border-radius: 4px; font-size: 14px; }
+button.enviar:hover, button.admin:hover { background: #004a99; }
